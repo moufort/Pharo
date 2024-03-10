@@ -1,3 +1,22 @@
+"
+La classe JavaDoc permet de faire de la documentation de toutes les classe à partir d'un package.
+
+La méthode GenerateDoc: prend un package en paramétre, et affiche pour chaque classe du package :
+
+le nom de la classe,
+	La super classe,
+	Les sous classes,
+	Les méthodes senders avec :
+		Les noms de méthodes:
+			Les senders de la méthodes
+	Les varaible d'instance avec:
+		Les méthodes qui appellent la variable.
+		
+GenerateDoc est une méthodes de class, il n'y a pas besoin de crée une instance pour l'utiliser, pour ce faire, il faut juste faire :
+JavaDoc GenerateDoc: 'Le nom du package'.
+
+Attention, la méthode peut prendre du temps pour des Packages trés remplie.
+"
 Class {
 	#name : #JavaDoc,
 	#superclass : #Object,
@@ -5,7 +24,7 @@ Class {
 }
 
 { #category : #methods }
-JavaDoc class >> GenerateDocWithStream: packageName [
+JavaDoc class >> GenerateDoc: packageName [
 	| package classes stream |
 	package := packageName asPackage.
 	classes := package classes.
@@ -34,10 +53,10 @@ JavaDoc class >> GenerateDocWithStream: packageName [
 				nextPutAll: '	méthodes Senders:';
 				nextPut: Character cr.
 			class methodDict
-				keysAndValuesDo: [ :key :value | 
+				keysAndAllValuesDo: [ :key :value | 
 					stream
 						nextPutAll: '		 ';
-						nextPutAll: key;
+						nextPutAll: key printString;
 						nextPutAll: ' senders :';
 						nextPut: Character cr.
 					(SystemNavigation default allSendersOf: key)
@@ -64,5 +83,6 @@ JavaDoc class >> GenerateDocWithStream: packageName [
 								nextPutAll: '		    ';
 								nextPutAll: call name;
 								nextPut: Character cr ] ] ].
+	stream close.
 	^ stream contents
 ]
