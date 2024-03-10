@@ -53,7 +53,7 @@ JavaDoc class >> GenerateDoc: packageName [
 				nextPutAll: '	méthodes Senders:';
 				nextPut: Character cr.
 			class methodDict
-				keysAndAllValuesDo: [ :key :value | 
+				keysAndValuesDo: [ :key :value | 
 					stream
 						nextPutAll: '		 ';
 						nextPutAll: key printString;

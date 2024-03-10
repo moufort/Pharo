@@ -11,45 +11,45 @@ self assert: (JavaDoc GenerateDoc: 'Matrice') equals: 'MyMatrice
 	Superclasse :Object
 	Sousclasse :
 	méthodes Senders:
-		 matriceWidth senders :
+		 #matriceWidth senders :
 		    MyMatrice>>#traditionnalToCreuse
-		 showCreuse senders :
+		 #showCreuse senders :
 		    MyMatrice>>#showMatrice
-		 creuseToTraditionnal senders :
+		 #creuseToTraditionnal senders :
 		    MyMatriceTest>>#testShowTraditionnal
 		    MyMatriceTest>>#testCreuseToTraditionnal
 		    MyMatriceTest>>#testTraditionnalToCreuse
-		 showTraditionnal senders :
+		 #showTraditionnal senders :
 		    MyMatrice>>#showMatrice
-		 matriceWidth: senders :
+		 #matriceWidth: senders :
 		    MyMatrice>>#creuseToTraditionnal
 		    MyMatriceTest>>#testShowCreuse
 		    MyMatriceTest>>#testShowTraditionnal
 		    MyMatriceTest>>#testCreuseToTraditionnal
 		    MyMatriceTest>>#testTraditionnalToCreuse
-		 showMatrice senders :
+		 #showMatrice senders :
 		    MyMatriceTest>>#testShowCreuse
 		    MyMatriceTest>>#testShowTraditionnal
-		 matrice senders :
+		 #matrice senders :
 		    MyMatrice>>#creuseToTraditionnal
 		    MyMatriceTest>>#testCreuseToTraditionnal
 		    MyMatriceTest>>#testTraditionnalToCreuse
-		 matriceHeight senders :
+		 #matriceHeight senders :
 		    MyMatrice>>#traditionnalToCreuse
-		 matriceHeight: senders :
+		 #matriceHeight: senders :
 		    MyMatrice>>#creuseToTraditionnal
 		    MyMatriceTest>>#testShowCreuse
 		    MyMatriceTest>>#testShowTraditionnal
 		    MyMatriceTest>>#testCreuseToTraditionnal
 		    MyMatriceTest>>#testTraditionnalToCreuse
-		 matrice: senders :
+		 #matrice: senders :
 		    MyMatrice>>#creuseToTraditionnal
 		    MyMatrice>>#traditionnalToCreuse
 		    MyMatriceTest>>#testShowCreuse
 		    MyMatriceTest>>#testShowTraditionnal
 		    MyMatriceTest>>#testCreuseToTraditionnal
 		    MyMatriceTest>>#testTraditionnalToCreuse
-		 traditionnalToCreuse senders :
+		 #traditionnalToCreuse senders :
 		    MyMatriceTest>>#testTraditionnalToCreuse
    variables d instance :
 		 matrice call :
@@ -64,10 +64,10 @@ MyMatriceTest
 	Superclasse :TestCase
 	Sousclasse :
 	méthodes Senders:
-		 testShowCreuse senders :
-		 testShowTraditionnal senders :
-		 testCreuseToTraditionnal senders :
-		 testTraditionnalToCreuse senders :
+		 #testShowCreuse senders :
+		 #testShowTraditionnal senders :
+		 #testCreuseToTraditionnal senders :
+		 #testTraditionnalToCreuse senders :
    variables d instance :
 '.
 ]
